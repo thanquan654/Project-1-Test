@@ -7,9 +7,10 @@ app:
         fontend-url-public: ${FRONTEND_URL_PUBLIC}
 spring:
     datasource:
-        url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
-        username: ${SPRING_DATASOURCE_USERNAME}
-        password: ${SPRING_DATASOURCE_PASSWORD}
+        url: jdbc:${DB_PUCLIC_URL}
+        # url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+        # username: ${SPRING_DATASOURCE_USERNAME}
+        # password: ${SPRING_DATASOURCE_PASSWORD}
     jpa:
         hibernate:
             ddl-auto: validate
