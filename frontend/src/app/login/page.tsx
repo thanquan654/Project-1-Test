@@ -93,9 +93,11 @@ export default function LoginPage() {
 
 			// Chuyển hướng người dùng đến trang dashboard hoặc trang chủ
 			router.push('/')
-		} catch (error: any) {
+		} catch (error) {
 			// Xử lý lỗi từ API (network error hoặc lỗi từ logic ở trên)
-			setApiError(error.message)
+			if (error instanceof Error) {
+				setApiError(error.message)
+			}
 		} finally {
 			// Dù thành công hay thất bại, luôn dừng trạng thái loading
 			setIsLoading(false)
