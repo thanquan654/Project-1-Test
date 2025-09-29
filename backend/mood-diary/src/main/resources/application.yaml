@@ -2,15 +2,15 @@ server:
   port: ${PORT:8080}
   forward-headers-strategy: framework
 app:
-  fontend-url: ${FRONTEND_URL:http://localhost:3000}
+  fontend-url: "${FRONTEND_URL:http://localhost:3000}"
   ngrok:
-    fontend-url-public: ${FRONTEND_URL_PUBLIC:https://real-unlikely-mastiff.ngrok-free.app}
+    fontend-url-public: "${FRONTEND_URL_PUBLIC:https://real-unlikely-mastiff.ngrok-free.app}"
 
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://root:rRbucJOLuPvjbULFcsaXphpDxlUirDhm@shinkansen.proxy.rlwy.net:56050/railway}
-    username: ${SPRING_DATASOURCE_USERNAME:root}
-    password: ${SPRING_DATASOURCE_PASSWORD:rRbucJOLuPvjbULFcsaXphpDxlUirDhm}
+    url: "${SPRING_DATASOURCE_URL:jdbc:mysql://root:rRbucJOLuPvjbULFcsaXphpDxlUirDhm@shinkansen.proxy.rlwy.net:56050/railway}"
+    username: "${SPRING_DATASOURCE_USERNAME:root}"
+    password: "${SPRING_DATASOURCE_PASSWORD:rRbucJOLuPvjbULFcsaXphpDxlUirDhm}"
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

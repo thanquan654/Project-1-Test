@@ -27,7 +27,7 @@ public class SecurityConfig {
                 .cors(withDefaults())
                 //
                 .authorizeHttpRequests(auth -> auth
-                            //    .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                                 .requestMatchers(
 //                                "/auth/register",
                                         "/auth/login"
